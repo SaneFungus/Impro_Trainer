@@ -1,0 +1,382 @@
+// --- DATA: BEHAVIORS (FAST FOOD STANISŁAWSKI) ---
+export const behaviors = {
+    high_status: [
+        "Zmiażdż każde wyzwanie.",
+        "Utrzymuj kontakt wzrokowy min. 5 sekund.",
+        "Trzymaj głowę nieruchomo, gdy mówisz.",
+        "Mrugaj rzadziej niż twój partner.",
+        "Poruszaj się płynnie, często zastygaj w bezruchu.",
+        "Używaj długiego 'yyy' zanim rozpoczniesz zdanie.",
+        "Zajmuj dużo miejsca (rozszerz stopy).",
+        "Dotykaj twarzy innych, klep ich po głowie.",
+        "Mów pełnymi zdaniami.",
+        "Weź kilka oddechów zanim coś powiesz."
+    ],
+    low_status: [
+        "Podziwiaj rzeczy innych, ale skrycie.",
+        "Odpowiadaj natychmiast.",
+        "Przygryzaj dolną wargę podczas uśmiechu.",
+        "Miej szeroko otwarte oczy.",
+        "Trać oddech gdy mówisz.",
+        "Przerywaj kontakt wzrokowy, ale sprawdzaj czy partner patrzy.",
+        "Uwłaczaj sobie ochoczo.",
+        "Śmiej się na krótkim oddechu (nerwowy chichot).",
+        "Drap się nerwowo po kolanach.",
+        "Często dotykaj swojej twarzy (zakrywaj usta).",
+        "Łącz stopy palcami (pięty na zewnątrz).",
+        "Trzymaj łokcie blisko tułowia."
+    ],
+    annoying: [
+        "Mów innym, że cię nudzą.",
+        "Przedrzeźniaj sposób zachowania osoby.",
+        "Bądź nadmiernie uprzejmy (sarkastycznie).",
+        "Pożycz coś i zepsuj/zgub.",
+        "Próbuj kontrolować tę osobę.",
+        "Krytykuj: wygląd, zwierzęta, język.",
+        "Udzielaj niechcianych rad.",
+        "Jęcz, warcz, zgrzytaj zębami.",
+        "Naruszaj osobistą przestrzeń (stań za blisko).",
+        "Przerywaj, gdy ktoś mówi.",
+        "Źle rozum osobę (przesłyszenia).",
+        "Zaczynaj zdania od 'ty zawsze' albo 'ty nigdy'.",
+        "Mów tylko o sobie."
+    ],
+    charming: [
+        "Zadawaj pytania o drugą osobę.",
+        "Pytaj o radę lub opinię.",
+        "Komplementuj (głos, ciało, ubiór).",
+        "Zauważaj ludzi pierwszy (wituj entuzjastycznie).",
+        "Znajduj innym partnerów/przyjaciół.",
+        "Pozwalaj innym mówić o sobie.",
+        "Dawaj drobne prezenty.",
+        "Pozwól im wygrać.",
+        "Proponuj jedzenie, picie, seks, pieniądze.",
+        "Cytuj partnera z podziwem.",
+        "Podziel się jakimś sekretem.",
+        "Opowiadaj miłe historie o rozmówcy."
+    ],
+    seduce_m: [
+        "Poproś go do tańca.",
+        "Podziwiaj jego gust.",
+        "Trać oddech przy nim.",
+        "Siadaj blisko (podwijając nogi).",
+        "Bądź dwuznaczna.",
+        "Bądź podatna na zranienie.",
+        "Pieść/głaszcz siebie.",
+        "Śmiej się z jego żartów.",
+        "Spraw, by czuł się wyjątkowy.",
+        "Powtarzaj w myśli: 'Weź mnie!'.",
+        "Jedz uwodzicielsko.",
+        "Zwilżaj wargi.",
+        "Dotykaj go, gdy mówisz."
+    ],
+    seduce_w: [
+        "Bądź chłopięcy, figlarny.",
+        "Bądź blisko niej.",
+        "Martw się, że możesz być gejem.",
+        "Bądź 'samotny'.",
+        "Mów otwarcie o osobistych sprawach.",
+        "Błagaj, płacz, płaszcz się.",
+        "Komplementuj.",
+        "Posiadaj wadę (ranę, impotencję).",
+        "Powtarzaj w myśli: 'Kocham cię'.",
+        "Utrzymuj kontakt wzrokowy.",
+        "Rzuć się na nią, a potem przepraszaj.",
+        "Kochaj małe zwierzątka i dzieci.",
+        "Dotknij jej piersi 'przez przypadek'."
+    ],
+    hero: [
+        "Posiadaj broń.",
+        "Bądź czujny, wykrywaj zagrożenia.",
+        "Miej wroga.",
+        "Objawiaj siłę i muskulaturę.",
+        "Miej mocny, rezonujący głos.",
+        "Śmiej się dużo (pokazuj zęby).",
+        "Zabij coś/kogoś.",
+        "Uratuj kogoś.",
+        "Opowiadaj o niezwykłych przygodach.",
+        "Pokaż blizny.",
+        "Wyobraź sobie świetlistą kulę w piersi.",
+        "Bądź nieczuły na ból.",
+        "Spraw, by ludzie czuli się bezpieczni przy tobie."
+    ],
+    beautiful: [
+        "Bądź powolna, omdlewająca.",
+        "Kontroluj wygląd (szukaj lustra).",
+        "Tańcz/pozuj.",
+        "Dużo się śmiej (pokazuj zęby).",
+        "Dotykaj i głaszcz się.",
+        "Chodź wyprostowana.",
+        "Martw się o figurę/skórę.",
+        "Pytaj o własną atrakcyjność.",
+        "Czyhaj na komplementy.",
+        "Nudź się, gdy rozmowa nie dotyczy ciebie.",
+        "Miej lepszy profil.",
+        "Wydawaj sensualne dźwięki.",
+        "Panikuj, gdy znajdziesz pryszcz."
+    ],
+    party: [
+        "Podziwiaj ludzi i rzeczy.",
+        "Zgadzaj się (akceptuj wszystko).",
+        "Bądź głośny/a.",
+        "Zachęcaj do łamania reguł.",
+        "Znaj fascynujące plotki.",
+        "Pamiętaj imiona (używaj ich).",
+        "Inicjuj zabawy/tańce.",
+        "Łam tabu.",
+        "Wygłupiaj się / rób sztuczki.",
+        "Przebieraj się w ubrania innych.",
+        "Namawiaj do picia/złego zachowania.",
+        "Zaproponuj rozbieranego pokera.",
+        "Rób 'wielkie wejścia' (ta-dam!)."
+    ],
+    mysterious: [
+        "Bądź skryty i milczący.",
+        "Rób aluzje.",
+        "Odbieraj dziwne telefony/prezenty.",
+        "Zachowuj się jak medium (wiedz co będzie).",
+        "Śmiej się z własnych myśli.",
+        "Znaj sekrety innych.",
+        "Miej broń lub wroga.",
+        "Patrz tak, jakbyś wszystko rozumiał.",
+        "Rób znaczące pauzy.",
+        "Bądź w podróży bez powodu (do NASA, więzienia).",
+        "Wchodź w trans / bądź opętany.",
+        "Oczekuj ataku.",
+        "Miej niewytłumaczalne prośby."
+    ],
+    boring: [
+        "Ziewaj.",
+        "Przerywaj / zmieniaj temat.",
+        "Narzekaj, że ktoś mówi w kółko to samo.",
+        "Wiedz, co ktoś chce powiedzieć.",
+        "Ignoruj.",
+        "Uderzaj głową w ścianę.",
+        "Proś, aby wyszedł.",
+        "Zadzwoń do kogoś/czytaj gazetę.",
+        "Pytaj: 'co?', 'słucham?', 'przepraszam?'.",
+        "Gap się, starając się nie patrzeć.",
+        "Potwierdzaj zbyt wcześnie (nie słuchając).",
+        "Patrz na zegarek."
+    ],
+    computer: [
+        "Bądź skuteczny (wszystko na miejscu).",
+        "Bądź chłodny i zdystansowany.",
+        "Nie miej przyjaciół (i bądź z tym ok).",
+        "Bądź 'drewniany'.",
+        "Bądź nieczuły na emocje i ból.",
+        "Unikaj kontaktu fizycznego.",
+        "Używaj suchego głosu.",
+        "Traktuj innych jak wolnych/ospałych.",
+        "Pauzuj przed odpowiedzią.",
+        "Proponuj rozwiązania.",
+        "Powstrzymuj wewnętrznie przemoc."
+    ],
+    guilty: [
+        "Przepraszaj.",
+        "Złam albo zniszcz coś.",
+        "Spowiadaj się (np. że zabiłeś zwierzątko).",
+        "Unikaj patrzenia w oczy / zwieszaj głowę.",
+        "Tłumacz się z powodów.",
+        "Wprawiaj w zakłopotanie.",
+        "Zapominaj zamknąć lodówkę/szafkę.",
+        "Pomagaj bardziej niż trzeba.",
+        "Pożycz coś i nie oddaj.",
+        "Kłam na temat antykoncepcji.",
+        "Wyjawiaj sekrety innych.",
+        "Wzdychaj."
+    ],
+    smart: [
+        "Poprawiaj ludzi.",
+        "Wiedz wszystko.",
+        "Wyjaśniaj zaskakujące rzeczy.",
+        "Używaj rzadkich słów.",
+        "Zachowuj się, jakby inni byli głupsi.",
+        "Cytuj statystyki (zmyślaj je).",
+        "Wtrącaj obce zdania.",
+        "Wydawaj 'myślące' dźwięki (mmm, aaa).",
+        "Gwiżdż Bacha.",
+        "Miej ze sobą książkę/kalkulator.",
+        "Krytykuj i oceniaj.",
+        "Rób notatki.",
+        "Zaczynaj zdania od: 'Moim zdaniem...'.",
+        "Nie słuchaj."
+    ],
+    bad_parent: [
+        "Oskarżaj o brak czułości.",
+        "Proś, by coś zrobili, a potem rób to sam.",
+        "Poprawiaj wygląd (dziecka/partnera).",
+        "Bądź męczennikiem.",
+        "Bądź zdegustowany.",
+        "Bądź nadopiekuńczy ('Zgwałcą cię!').",
+        "Konfiskuj rzeczy.",
+        "Twórz przeszkody.",
+        "Jedz pozostawione jedzenie.",
+        "Porównuj z innymi.",
+        "Poniżaj publicznie.",
+        "Tylko ty wiesz, jak coś zrobić.",
+        "Mów: 'Ty zawsze...', 'Ty nigdy...'."
+    ],
+    happy: [
+        "Miej zachwycający sekret.",
+        "Zwracaj się do innych z humorem.",
+        "Dotykaj rzeczy i siebie.",
+        "Miej w głowie wesołą piosenkę.",
+        "Uśmiechaj się dla przyjemności.",
+        "Tańcz, śpiewaj.",
+        "Bądź spokojny i żywy.",
+        "Miej dużo czasu.",
+        "Pobłażaj sobie (czekolada!).",
+        "Powtarzaj mantrę: 'Kocham to wszystko'.",
+        "Rozmawiaj swobodnie o prywatności.",
+        "Psuj rzeczy, ale nie czuj winy.",
+        "Używaj otwartej postawy."
+    ],
+    normal: [
+        "Zgadzaj się z ostrożnością.",
+        "Zadawaj nudne pytania.",
+        "Chodź do kościoła.",
+        "Kontroluj wygląd i opinie.",
+        "Nie przepadaj za dotykiem.",
+        "Nie przeklinaj.",
+        "Dyskutuj o nudnych rzeczach (pogoda, TV).",
+        "Uważaj innych za dziwnych.",
+        "Miej psa.",
+        "Miej delikatny uśmiech.",
+        "Siedź symetrycznie.",
+        "Pokazuj zdjęcia rodzinne.",
+        "Mów frazesy/komunały.",
+        "Panikuj przez moment, wracaj do spokoju."
+    ],
+    jerk: [
+        "Bądź nietaktowny.",
+        "Pierz brudy publicznie.",
+        "Przechwalaj się.",
+        "Miej pretensje do świata.",
+        "Wytykaj cudze wady (jesteś głupi/brzydki).",
+        "Dręcz i irytuj.",
+        "Sprowadzaj wszystko do seksu/wydalania.",
+        "Gub wątek.",
+        "Opowiadaj bezsensowne dowcipy.",
+        "Śmiej się agresywnie.",
+        "Naruszaj przestrzeń.",
+        "Nigdy nie bierz 'nie' za odpowiedź.",
+        "Obwiniaj innych."
+    ],
+    sympathy: [
+        "Wzdychaj.",
+        "Miej waleczny uśmiech (przez łzy).",
+        "Bądź niezdarna/niedołężna.",
+        "Płacz, szlochaj.",
+        "Bądź zakłopotana.",
+        "Bądź bezrobotna.",
+        "Zrań się (wylej coś na siebie).",
+        "Zasłoń twarz i płacz.",
+        "Miej upośledzenie.",
+        "Miej strasznego szefa/partnera.",
+        "Karz się, gdy coś nie wyjdzie.",
+        "Opowiadaj łzawe historie.",
+        "Bądź zła w łóżku / samotna.",
+        "Traktuj siebie jako ofiarę."
+    ]
+};
+
+// --- DATA: QUOTES (COACH) ---
+export const quotes = [
+    "Bądź oczywisty!",
+    "Nie staraj się być oryginalny!",
+    "Bądź przeciętny!",
+    "Zrób to, czego chce twój partner!",
+    "Jeśli masz pomysł, zrób to od razu!",
+    "Nie blokuj! Mów TAK!",
+    "Błąd to prezent - uciesz się z niego!",
+    "Spraw, by twój partner wyglądał dobrze!",
+    "Nie planuj! Bądź tu i teraz!",
+    "Zmień status!",
+    "Zrób coś fizycznego!",
+    "Bądź nudny!",
+    "Zaryzykuj!",
+    "Powiedz to, co myślisz naprawdę.",
+    "Wprowadź Tilt (zmianę)!",
+    "Nie bądź dowcipny.",
+    "Bądź w kłopotach!",
+    "Utrzymuj kontakt wzrokowy.",
+    "Oddychaj!",
+    "Pozwól się zmienić."
+];
+
+// --- DATA: SCENARIOS & TILTS ---
+export const scenarios = [
+    "A i B są obcymi ludźmi w poczekalni.",
+    "A i B są rodzeństwem sprzątającym strych.",
+    "A jest szefem, B przychodzi po podwyżkę.",
+    "Pierwsza randka w ciemno.",
+    "Dwóch saperów rozbraja bombę.",
+    "Spotkanie po latach na pogrzebie.",
+    "Klient składa reklamację w sklepie zoologicznym.",
+    "A uczy B jazdy samochodem.",
+    "Dwoje ludzi utknęło w windzie.",
+    "Przesłuchanie na policji."
+];
+
+export const tilts = [
+    "Wiem o tobie wszystko.",
+    "Mam władzę nad pogodą (pstryknij, by zmienić).",
+    "Jesteś moim zaginionym bratem/siostrą.",
+    "Mam w kieszeni pistolet.",
+    "Kocham cię (powiedziane do wroga).",
+    "Właśnie umarłem i jestem duchem.",
+    "Zwolnili mnie dzisiaj z pracy.",
+    "Ten dom jest nawiedzony.",
+    "Wygrałem milion w lotto.",
+    "Jestem z przyszłości."
+];
+
+export const mantras = [
+    "Kocham cię, ale nigdy cię nie zdobędę.",
+    "Nienawidzę cię, ale cię pożądam.",
+    "Jestem od ciebie lepszy.",
+    "Boję się ciebie.",
+    "Chcę cię zabić, ale muszę być miły.",
+    "Jestem najpiękniejszą osobą w tym pokoju.",
+    "Ukrywam straszną tajemnicę.",
+    "Wszystko mnie bawi.",
+    "Gardzę tym miejscem.",
+    "Chcę tylko, żebyś mnie przytulił."
+];
+
+// --- DATA: GAMES ---
+export const games = [
+    {
+        title: "Kapelusze (Hat Game)",
+        desc: "Dwie osoby grają scenę. Każda próbuje zdjąć kapelusz partnera, chroniąc własny. Uczy uważności i bycia 'tu i teraz'. Nie planuj ataku - czekaj na okazję."
+    },
+    {
+        title: "I co dalej? (What comes next?)",
+        desc: "Jeden aktor pyta 'I co dalej?', drugi proponuje akcję. Jeśli pierwszy akceptuje - robią to. Jeśli nie - pyta ponownie. Ćwiczy wyczuwanie oczekiwań partnera."
+    },
+    {
+        title: "Słowo po słowie (Word at a time)",
+        desc: "Dwie osoby budują historię, mówiąc na zmianę tylko jedno słowo. Uczy rezygnacji z kontroli i budowania wspólnego umysłu."
+    },
+    {
+        title: "Pan i Sługa (Master & Servant)",
+        desc: "Klasyczna gra statusowa. Sługa musi spełniać zachcianki Pana, ale Pan nie może być zadowolony. Pan karze sługę (np. balonem), jeśli sługa popełni błąd statusowy."
+    },
+    {
+        title: "Micetro",
+        desc: "Format eliminacyjny. Reżyserzy losują graczy do scenek. Publiczność ocenia każdą scenę punktami. Wygrywa ten, kto przetrwa do końca."
+    },
+    {
+        title: "Głosy (Dubbing)",
+        desc: "Aktorzy na scenie tylko ruszają ustami. Aktorzy z boku podkładają im głosy. Wymaga ogromnej synchronizacji i słuchania."
+    },
+    {
+        title: "Ekspert (Jeden Głos)",
+        desc: "Kilka osób stoi w rzędzie i odpowiada na pytania jako jeden ekspert, mówiąc jednocześnie (chórem) lub słowo po słowie."
+    },
+    {
+        title: "Life Game",
+        desc: "Spektakl oparty na biografii gościa. Aktorzy odgrywają sceny z jego życia. Gość ma dzwonek (tak, to prawda) i trąbkę (nie, fałsz), by korygować aktorów."
+    }
+];
