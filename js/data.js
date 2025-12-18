@@ -1,4 +1,21 @@
-// --- DATA: BEHAVIORS (FAST FOOD STANISŁAWSKI) ---
+// --- DATA FROM THE BOOK "Improwizacja wg Johnstone'a" ---
+
+export const lifeGameQuestions = [
+    "Jakim superbohaterem chciałeś/chciałaś być w dzieciństwie?",
+    "Które z obelg po swoim adresem pamiętasz do dzisiaj?",
+    "Jak wyglądał twój młodzieńczy bunt?",
+    "Kto złamał ci serce?",
+    "Jakie było najgorsze zajęcie, jakim się kiedykolwiek zajmowałeś/zajmowałaś?",
+    "Czy kiedykolwiek oszukiwałeś/oszukiwałaś z zimną krwią?",
+    "Czy byłeś/byłaś kiedyś tak pijany/pijana, że nie pamiętasz, jak skończył się wieczór?",
+    "Czemu rzuciłeś/rzuciłaś dziewczynę/chłopaka, z którym chodziłeś/chodziłaś tak długo?",
+    "Jakie były najlepsze lata twojego życia?",
+    "Czy masz jakieś powracające sny?",
+    "Opisz swoją sypialnię z dzieciństwa.",
+    "Jaka jest twoja największa tajemnica?",
+    "Czego najbardziej żałujesz?"
+];
+
 export const behaviors = {
     high_status: [
         "Zmiażdż każde wyzwanie.",
@@ -281,7 +298,6 @@ export const behaviors = {
     ]
 };
 
-// --- DATA: QUOTES (COACH) ---
 export const quotes = [
     "Bądź oczywisty!",
     "Nie staraj się być oryginalny!",
@@ -302,10 +318,13 @@ export const quotes = [
     "Bądź w kłopotach!",
     "Utrzymuj kontakt wzrokowy.",
     "Oddychaj!",
-    "Pozwól się zmienić."
+    "Pozwól się zmienić.",
+    "Nie staraj się robić najlepiej jak potrafisz.",
+    "Jeśli planujesz - mniej odkrywasz.",
+    "Publiczność jest mądrzejsza od reżysera.",
+    "Cisza jest zawsze intrygująca."
 ];
 
-// --- DATA: SCENARIOS ---
 export const scenarios = [
     "A i B są obcymi ludźmi w poczekalni.",
     "A i B są rodzeństwem sprzątającym strych.",
@@ -319,9 +338,7 @@ export const scenarios = [
     "Przesłuchanie na policji."
 ];
 
-// --- DATA: TILTS (ZAKTUALIZOWANE) ---
 export const tilts = [
-    // Oryginalne
     "Właśnie odkrywasz, że partner to Twój dawno zaginiony brat.",
     "W Twojej kieszeni znajduje się pistolet, o którym zapomniałeś.",
     "Dowiadujesz się, że oboje jesteście w programie reality-show.",
@@ -332,49 +349,11 @@ export const tilts = [
     "Partner właśnie wyznał Ci miłość, ale Ty go nienawidzisz.",
     "Zwalniają cię z pracy przez telefon.",
     "Właśnie wygrałeś milion na loterii.",
-    // Nowe (z Aneksu 2) - Horror & Tajemnica
-    "Znajdujesz zdjęcia zamordowanych opiekunek (w szufladzie partnera).",
-    "Słyszysz kogoś obcego w mieszkaniu.",
-    "Znajdujesz w domu dowody świadczące o mrocznym kulcie.",
-    "Kanapa zaczyna cię uwodzić (słyszysz jej głos).",
-    "Potwory powiedziały, że jeśli o nich powiesz, porwą tatę.",
-    "Książka, którą czytasz, opisuje dokładnie to, co akurat się dzieje.",
-    "Śledzi cię morderca i nie wiesz czemu (to ty z przyszłości?).",
-    "Twoja dłoń nagle przestaje cię słuchać i chce kogoś udusić.",
-    // Nowe - Rodzina & Związki
-    "Dzieci w szkole mówią, że twoi rodzice są czarnoksiężnikami.",
-    "Nakrywasz włamywacza - to twoja najlepsza przyjaciółka.",
-    "Mówisz znajomemu, że jest za brzydki, by z tobą wyjść.",
-    "Twoja partnerka na randce zajmuje się wypychaniem zwierząt i mierzy cię wzrokiem.",
-    "Umawiam się z tobą tylko po to, by widywać twojego brata.",
-    "Właśnie odkrywasz, że twoja żona to robot.",
-    "Żona zakłada twoje ubrania i mówi twoim głosem.",
-    "Pan młody okazuje się prawdziwym czarodziejem.",
-    "Odkrywasz, że w minionym wcieleniu byliście kochankami (i cię zdradził).",
-    "Udawałem każdy orgazm!",
-    // Nowe - Science Fiction & Dziwne
     "Autostopowicz to tak naprawdę Śmierć.",
-    "Hotel okazuje się statkiem kosmicznym.",
-    "Po katastrofie jesteś na wyspie, która zaczyna do ciebie mówić.",
-    "Dzieci mówią, że urodziłem się z jajka (jesteśmy gadami?).",
-    "Ranne zwierzę na polowaniu błaga ludzkim głosem o litość.",
-    "Zorientuj się, że wszyscy goście na imprezie są martwi.",
-    "Jedno z was potrafi kontrolować pogodę (demonstruje to).",
-    "Przybywam z przyszłości, by cię ostrzec.",
-    "To było moje ulubione miejsce za życia (jesteś duchem).",
-    "Jestem łowcą głów i właśnie cię znalazłem.",
-    // Nowe - Konflikt & Przestępstwo
-    "Przejechałem pieszego i nie zatrzymałem się.",
-    "Kierowca prosi autostopowicza, by go zamordował dla ubezpieczenia.",
-    "Masz pistolet i żądasz, by partner wykopał sobie grób.",
-    "Osoba, którą przywiązałeś do łóżka, to twój stary wróg.",
-    "Szef cię zwalnia (ale ty wiesz o jego malwersacjach).",
-    "Jesteś wampirem i chcesz się wyleczyć z picia krwi.",
-    "Jesteś kosmitą i musisz zamienić się z kimś na ciała.",
-    "Nieznajomy w parku zna twoje najskrytsze sekrety."
+    "Wiem o tobie wszystko.",
+    "To było moje ulubione miejsce... kiedy jeszcze żyłam."
 ];
 
-// --- DATA: MANTRAS ---
 export const mantras = [
     "Kocham cię, ale nigdy cię nie zdobędę.",
     "Nienawidzę cię, ale cię pożądam.",
@@ -388,7 +367,6 @@ export const mantras = [
     "Chcę tylko, żebyś mnie przytulił."
 ];
 
-// --- DATA: LOCATIONS (NOWE) ---
 export const locations = [
   "Poczekalnia u dentysty",
   "Pusta plaża o świcie",
@@ -403,12 +381,12 @@ export const locations = [
   "Cmentarz w nocy"
 ];
 
-// --- DATA: GAMES (ZAKTUALIZOWANE) ---
 export const games = [
     {
       id: 1,
       title: "Uczenie Delfina",
       category: "Spontaniczność / Komunikacja",
+      players: "Grupa",
       description: "Aktor opuszcza salę, grupa wymyśla proste zadanie. Po powrocie grupa naprowadza go dźwiękami (bip-bip) lub klaskaniem.",
       goal: "Uwaga, otwarcie na partnera, czysty umysł."
     },
@@ -416,6 +394,7 @@ export const games = [
       id: 2,
       title: "Tak, zróbmy to! (Group-Yes)",
       category: "Akceptacja",
+      players: "Grupa",
       description: "Grupa stoi razem. Jedna osoba rzuca pomysł (np. 'Idziemy przez las!'), wszyscy odpowiadają entuzjastycznie 'Tak, zróbmy to!' i wykonują akcję.",
       goal: "Budowanie wspólnej energii, akceptacja ofert."
     },
@@ -423,6 +402,7 @@ export const games = [
       id: 3,
       title: "Bitwa Statusowa (1-3)",
       category: "Status",
+      players: "3 osoby",
       description: "Trójka aktorów. Każdy wybiera numer: 1 (najwyższy), 2 (średni), 3 (najniższy). Rozgrywają scenę, zachowując hierarchię.",
       goal: "Zrozumienie dynamiki dominacji i podporządkowania."
     },
@@ -430,6 +410,7 @@ export const games = [
       id: 4,
       title: "I co dalej? (What comes next?)",
       category: "Storytelling",
+      players: "2 osoby",
       description: "Jedna osoba opowiada historię, druga (pasażer) pyta 'I co dalej?'. Jeśli pasażerowi pomysł się nie podoba, mówi 'Nie' (z uśmiechem).",
       goal: "Rozpoznawanie oczekiwań partnera i publiczności."
     },
@@ -437,6 +418,7 @@ export const games = [
       id: 5,
       title: "Fast Food Stanisławski",
       category: "Charakterystyczność",
+      players: "Dowolna",
       description: "Aktorzy dostają listy zachowań (z tego narzędzia!) i starają się je uwiarygodnić w prostej sytuacji (np. spotkanie w poczekalni).",
       goal: "Szybkie budowanie postaci przez zewnętrzną formę."
     },
@@ -444,6 +426,7 @@ export const games = [
       id: 6,
       title: "Tilt (Wstrząs)",
       category: "Storytelling",
+      players: "2 osoby",
       description: "Aktorzy plotkują o niczym, aż następuje punkt zwrotny (Tilt), który zmienia relację (np. 'Zabiłam twojego kota').",
       goal: "Posuwanie akcji naprzód przez zmianę."
     },
@@ -451,6 +434,7 @@ export const games = [
         id: 7,
         title: "Kapelusze (Hat Game)",
         category: "Uważność",
+        players: "2 osoby",
         description: "Dwie osoby grają scenę. Każda próbuje zdjąć kapelusz partnera, chroniąc własny. Uczy uważności i bycia 'tu i teraz'.",
         goal: "Podzielność uwagi między zadaniem fizycznym a sceną."
     },
@@ -458,7 +442,24 @@ export const games = [
         id: 8,
         title: "Słowo po słowie",
         category: "Współpraca",
+        players: "2 osoby",
         description: "Dwie osoby budują historię, mówiąc na zmianę tylko jedno słowo. Uczy rezygnacji z kontroli.",
         goal: "Budowanie wspólnego umysłu (Group Mind)."
+    },
+    {
+        id: 9,
+        title: "Ślepcy (Blind Running)",
+        category: "Zaufanie",
+        players: "Grupa / Pary",
+        description: "Dwie osoby z zamkniętymi oczami konstruują historię słowo po słowie, odgrywając ją. Grupa asekuruje.",
+        goal: "Zaufanie i wyostrzenie zmysłów innych niż wzrok."
+    },
+    {
+        id: 10,
+        title: "Micetro",
+        category: "Format",
+        players: "Grupa (do 20)",
+        description: "Seria szybkich scenek. Gracze są oceniani przez publiczność, ci z najniższą punktacją odpadają.",
+        goal: "Oswajanie się z oceną i porażką w bezpiecznych warunkach."
     }
 ];
