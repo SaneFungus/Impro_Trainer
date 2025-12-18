@@ -305,7 +305,7 @@ export const quotes = [
     "Pozwól się zmienić."
 ];
 
-// --- DATA: SCENARIOS & TILTS ---
+// --- DATA: SCENARIOS ---
 export const scenarios = [
     "A i B są obcymi ludźmi w poczekalni.",
     "A i B są rodzeństwem sprzątającym strych.",
@@ -319,19 +319,62 @@ export const scenarios = [
     "Przesłuchanie na policji."
 ];
 
+// --- DATA: TILTS (ZAKTUALIZOWANE) ---
 export const tilts = [
-    "Wiem o tobie wszystko.",
-    "Mam władzę nad pogodą (pstryknij, by zmienić).",
-    "Jesteś moim zaginionym bratem/siostrą.",
-    "Mam w kieszeni pistolet.",
-    "Kocham cię (powiedziane do wroga).",
-    "Właśnie umarłem i jestem duchem.",
-    "Zwolnili mnie dzisiaj z pracy.",
-    "Ten dom jest nawiedzony.",
-    "Wygrałem milion w lotto.",
-    "Jestem z przyszłości."
+    // Oryginalne
+    "Właśnie odkrywasz, że partner to Twój dawno zaginiony brat.",
+    "W Twojej kieszeni znajduje się pistolet, o którym zapomniałeś.",
+    "Dowiadujesz się, że oboje jesteście w programie reality-show.",
+    "Nagle tracisz wzrok, ale nie chcesz tego przyznać.",
+    "Właśnie przypominasz sobie, że partner Cię kiedyś okradł.",
+    "To miejsce jest nawiedzone, a Ty słyszysz głosy.",
+    "Masz nad partnerem absolutną kontrolę (np. poprzez pstryknięcie).",
+    "Partner właśnie wyznał Ci miłość, ale Ty go nienawidzisz.",
+    "Zwalniają cię z pracy przez telefon.",
+    "Właśnie wygrałeś milion na loterii.",
+    // Nowe (z Aneksu 2) - Horror & Tajemnica
+    "Znajdujesz zdjęcia zamordowanych opiekunek (w szufladzie partnera).",
+    "Słyszysz kogoś obcego w mieszkaniu.",
+    "Znajdujesz w domu dowody świadczące o mrocznym kulcie.",
+    "Kanapa zaczyna cię uwodzić (słyszysz jej głos).",
+    "Potwory powiedziały, że jeśli o nich powiesz, porwą tatę.",
+    "Książka, którą czytasz, opisuje dokładnie to, co akurat się dzieje.",
+    "Śledzi cię morderca i nie wiesz czemu (to ty z przyszłości?).",
+    "Twoja dłoń nagle przestaje cię słuchać i chce kogoś udusić.",
+    // Nowe - Rodzina & Związki
+    "Dzieci w szkole mówią, że twoi rodzice są czarnoksiężnikami.",
+    "Nakrywasz włamywacza - to twoja najlepsza przyjaciółka.",
+    "Mówisz znajomemu, że jest za brzydki, by z tobą wyjść.",
+    "Twoja partnerka na randce zajmuje się wypychaniem zwierząt i mierzy cię wzrokiem.",
+    "Umawiam się z tobą tylko po to, by widywać twojego brata.",
+    "Właśnie odkrywasz, że twoja żona to robot.",
+    "Żona zakłada twoje ubrania i mówi twoim głosem.",
+    "Pan młody okazuje się prawdziwym czarodziejem.",
+    "Odkrywasz, że w minionym wcieleniu byliście kochankami (i cię zdradził).",
+    "Udawałem każdy orgazm!",
+    // Nowe - Science Fiction & Dziwne
+    "Autostopowicz to tak naprawdę Śmierć.",
+    "Hotel okazuje się statkiem kosmicznym.",
+    "Po katastrofie jesteś na wyspie, która zaczyna do ciebie mówić.",
+    "Dzieci mówią, że urodziłem się z jajka (jesteśmy gadami?).",
+    "Ranne zwierzę na polowaniu błaga ludzkim głosem o litość.",
+    "Zorientuj się, że wszyscy goście na imprezie są martwi.",
+    "Jedno z was potrafi kontrolować pogodę (demonstruje to).",
+    "Przybywam z przyszłości, by cię ostrzec.",
+    "To było moje ulubione miejsce za życia (jesteś duchem).",
+    "Jestem łowcą głów i właśnie cię znalazłem.",
+    // Nowe - Konflikt & Przestępstwo
+    "Przejechałem pieszego i nie zatrzymałem się.",
+    "Kierowca prosi autostopowicza, by go zamordował dla ubezpieczenia.",
+    "Masz pistolet i żądasz, by partner wykopał sobie grób.",
+    "Osoba, którą przywiązałeś do łóżka, to twój stary wróg.",
+    "Szef cię zwalnia (ale ty wiesz o jego malwersacjach).",
+    "Jesteś wampirem i chcesz się wyleczyć z picia krwi.",
+    "Jesteś kosmitą i musisz zamienić się z kimś na ciała.",
+    "Nieznajomy w parku zna twoje najskrytsze sekrety."
 ];
 
+// --- DATA: MANTRAS ---
 export const mantras = [
     "Kocham cię, ale nigdy cię nie zdobędę.",
     "Nienawidzę cię, ale cię pożądam.",
@@ -345,38 +388,77 @@ export const mantras = [
     "Chcę tylko, żebyś mnie przytulił."
 ];
 
-// --- DATA: GAMES ---
+// --- DATA: LOCATIONS (NOWE) ---
+export const locations = [
+  "Poczekalnia u dentysty",
+  "Pusta plaża o świcie",
+  "Winda utknięta między piętrami",
+  "Salon meblowy IKEA nocą",
+  "Pokład statku kosmicznego",
+  "Kolejka po zasiłek",
+  "Górskie schronisko podczas burzy",
+  "Zaplecze taniej restauracji",
+  "Przedział w pociągu",
+  "Biblioteka miejska",
+  "Cmentarz w nocy"
+];
+
+// --- DATA: GAMES (ZAKTUALIZOWANE) ---
 export const games = [
     {
+      id: 1,
+      title: "Uczenie Delfina",
+      category: "Spontaniczność / Komunikacja",
+      description: "Aktor opuszcza salę, grupa wymyśla proste zadanie. Po powrocie grupa naprowadza go dźwiękami (bip-bip) lub klaskaniem.",
+      goal: "Uwaga, otwarcie na partnera, czysty umysł."
+    },
+    {
+      id: 2,
+      title: "Tak, zróbmy to! (Group-Yes)",
+      category: "Akceptacja",
+      description: "Grupa stoi razem. Jedna osoba rzuca pomysł (np. 'Idziemy przez las!'), wszyscy odpowiadają entuzjastycznie 'Tak, zróbmy to!' i wykonują akcję.",
+      goal: "Budowanie wspólnej energii, akceptacja ofert."
+    },
+    {
+      id: 3,
+      title: "Bitwa Statusowa (1-3)",
+      category: "Status",
+      description: "Trójka aktorów. Każdy wybiera numer: 1 (najwyższy), 2 (średni), 3 (najniższy). Rozgrywają scenę, zachowując hierarchię.",
+      goal: "Zrozumienie dynamiki dominacji i podporządkowania."
+    },
+    {
+      id: 4,
+      title: "I co dalej? (What comes next?)",
+      category: "Storytelling",
+      description: "Jedna osoba opowiada historię, druga (pasażer) pyta 'I co dalej?'. Jeśli pasażerowi pomysł się nie podoba, mówi 'Nie' (z uśmiechem).",
+      goal: "Rozpoznawanie oczekiwań partnera i publiczności."
+    },
+    {
+      id: 5,
+      title: "Fast Food Stanisławski",
+      category: "Charakterystyczność",
+      description: "Aktorzy dostają listy zachowań (z tego narzędzia!) i starają się je uwiarygodnić w prostej sytuacji (np. spotkanie w poczekalni).",
+      goal: "Szybkie budowanie postaci przez zewnętrzną formę."
+    },
+    {
+      id: 6,
+      title: "Tilt (Wstrząs)",
+      category: "Storytelling",
+      description: "Aktorzy plotkują o niczym, aż następuje punkt zwrotny (Tilt), który zmienia relację (np. 'Zabiłam twojego kota').",
+      goal: "Posuwanie akcji naprzód przez zmianę."
+    },
+    {
+        id: 7,
         title: "Kapelusze (Hat Game)",
-        desc: "Dwie osoby grają scenę. Każda próbuje zdjąć kapelusz partnera, chroniąc własny. Uczy uważności i bycia 'tu i teraz'. Nie planuj ataku - czekaj na okazję."
+        category: "Uważność",
+        description: "Dwie osoby grają scenę. Każda próbuje zdjąć kapelusz partnera, chroniąc własny. Uczy uważności i bycia 'tu i teraz'.",
+        goal: "Podzielność uwagi między zadaniem fizycznym a sceną."
     },
     {
-        title: "I co dalej? (What comes next?)",
-        desc: "Jeden aktor pyta 'I co dalej?', drugi proponuje akcję. Jeśli pierwszy akceptuje - robią to. Jeśli nie - pyta ponownie. Ćwiczy wyczuwanie oczekiwań partnera."
-    },
-    {
-        title: "Słowo po słowie (Word at a time)",
-        desc: "Dwie osoby budują historię, mówiąc na zmianę tylko jedno słowo. Uczy rezygnacji z kontroli i budowania wspólnego umysłu."
-    },
-    {
-        title: "Pan i Sługa (Master & Servant)",
-        desc: "Klasyczna gra statusowa. Sługa musi spełniać zachcianki Pana, ale Pan nie może być zadowolony. Pan karze sługę (np. balonem), jeśli sługa popełni błąd statusowy."
-    },
-    {
-        title: "Micetro",
-        desc: "Format eliminacyjny. Reżyserzy losują graczy do scenek. Publiczność ocenia każdą scenę punktami. Wygrywa ten, kto przetrwa do końca."
-    },
-    {
-        title: "Głosy (Dubbing)",
-        desc: "Aktorzy na scenie tylko ruszają ustami. Aktorzy z boku podkładają im głosy. Wymaga ogromnej synchronizacji i słuchania."
-    },
-    {
-        title: "Ekspert (Jeden Głos)",
-        desc: "Kilka osób stoi w rzędzie i odpowiada na pytania jako jeden ekspert, mówiąc jednocześnie (chórem) lub słowo po słowie."
-    },
-    {
-        title: "Life Game",
-        desc: "Spektakl oparty na biografii gościa. Aktorzy odgrywają sceny z jego życia. Gość ma dzwonek (tak, to prawda) i trąbkę (nie, fałsz), by korygować aktorów."
+        id: 8,
+        title: "Słowo po słowie",
+        category: "Współpraca",
+        description: "Dwie osoby budują historię, mówiąc na zmianę tylko jedno słowo. Uczy rezygnacji z kontroli.",
+        goal: "Budowanie wspólnego umysłu (Group Mind)."
     }
 ];
