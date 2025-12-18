@@ -1,6 +1,36 @@
 // Importujemy dane
 import { behaviors, quotes, scenarios, tilts, mantras, games, locations } from './data.js';
 
+// --- STATE MANAGEMENT ---
+// Obiekt przechowujący stan zużytych elementów dla każdej kategorii
+const state = {};
+
+/**
+ * Funkcja pobierająca unikalny element z listy.
+ * Usuwa wylosowany element z puli tymczasowej.
+ * Gdy pula jest pusta, resetuje ją (kopiuje z oryginału).
+ * * @param {string} key - Unikalny klucz dla danej listy (np. 'scenarios', 'behavior_high_status')
+ * @param {Array} sourceList - Oryginalna tablica z danymi
+ * @returns {any} Wylosowany element
+ */
+function getUniqueRandomItem(key, sourceList) {
+    // Jeśli pula dla danego klucza nie istnieje lub jest pusta, napełnij ją
+    if (!state[key] || state[key].length === 0) {
+        // Kopiujemy tablicę (spread operator), żeby nie modyfikować oryginału w data.js
+        state[key] = [...sourceList];
+        
+        // Opcjonalnie: Można tu dodać logikę "tasowania", ale losowanie indeksu poniżej wystarczy
+    }
+
+    // Losujemy indeks z dostępnej puli
+    const randomIndex = Math.floor(Math.random() * state[key].length);
+    
+    // Wyciągamy element (splice zwraca tablicę usuniętych elementów, bierzemy pierwszy)
+    const item = state[key].splice(randomIndex, 1)[0];
+    
+    return item;
+}
+
 // --- LOGIC ---
 
 function switchTab(tabName) {
@@ -31,7 +61,9 @@ function generateBehavior() {
     const categoryEl = document.getElementById('behavior-category');
     const category = categoryEl.value;
     const list = behaviors[category];
-    const randomItem = list[Math.floor(Math.random() * list.length)];
+    
+    // Używamy unikalnego klucza dla każdej kategorii zachowań (np. behavior_high_status)
+    const randomItem = getUniqueRandomItem(`behavior_${category}`, list);
     
     const display = document.getElementById('behavior-display');
     const catText = categoryEl.options[categoryEl.selectedIndex].text;
@@ -40,34 +72,40 @@ function generateBehavior() {
         <div class="fade-in">
             <h3 class="text-amber-500 font-bold text-lg mb-2 uppercase tracking-wide opacity-80">${catText}</h3>
             <p class="text-xl md:text-2xl font-bold text-white leading-relaxed">"${randomItem}"</p>
+            <p class="text-xs text-neutral-600 mt-2">Pozostało w talii: ${state[`behavior_${category}`].length}</p>
         </div>
     `;
 }
 
 function generateScenario() {
-    const item = scenarios[Math.floor(Math.random() * scenarios.length)];
-    document.getElementById('scenario-display').innerHTML = `<span class="fade-in text-lg font-medium">${item}</span>`;
+    const item = getUniqueRandomItem('scenarios', scenarios);
+    document.getElementById('scenario-display').innerHTML = `
+        <span class="fade-in text-lg font-medium">${item}</span>
+        <div class="text-xs text-neutral-600 mt-1">Jeszcze ${state['scenarios'].length} unikalnych</div>
+    `;
 }
 
 function generateTilt() {
-    const item = tilts[Math.floor(Math.random() * tilts.length)];
-    document.getElementById('tilt-display').innerHTML = `<span class="fade-in text-xl font-bold text-red-400">"${item}"</span>`;
+    const item = getUniqueRandomItem('tilts', tilts);
+    document.getElementById('tilt-display').innerHTML = `
+        <span class="fade-in text-xl font-bold text-red-400">"${item}"</span>
+        <div class="text-xs text-neutral-600 mt-1">Jeszcze ${state['tilts'].length} unikalnych</div>
+    `;
 }
 
 function generateMantra() {
-    const item = mantras[Math.floor(Math.random() * mantras.length)];
+    const item = getUniqueRandomItem('mantras', mantras);
     document.getElementById('mantra-display').innerHTML = `<span class="fade-in italic">"${item}"</span>`;
 }
 
-// NOWA FUNKCJA: Losowanie Lokacji
 function generateLocation() {
-    const item = locations[Math.floor(Math.random() * locations.length)];
+    const item = getUniqueRandomItem('locations', locations);
     document.getElementById('location-display').innerHTML = `<span class="fade-in text-lg font-bold text-green-300">"${item}"</span>`;
 }
 
 let coachInterval;
 function nextCoachQuote() {
-    const item = quotes[Math.floor(Math.random() * quotes.length)];
+    const item = getUniqueRandomItem('quotes', quotes);
     const display = document.getElementById('coach-display');
     
     display.classList.remove('scale-100');
@@ -97,7 +135,7 @@ function toggleAutoCoach() {
     }
 }
 
-// ZMIANA: Renderowanie gier jako klikalne kafelki
+// Renderowanie gier jako klikalne kafelki
 function renderGames() {
     const container = document.getElementById('games-list');
     if (!container) return;
@@ -111,7 +149,6 @@ function renderGames() {
         </div>
     `).join('');
 
-    // Dodajemy event listenery do nowo stworzonych elementów
     document.querySelectorAll('.game-card').forEach(card => {
         card.addEventListener('click', () => {
             const id = parseInt(card.getAttribute('data-id'));
@@ -120,7 +157,7 @@ function renderGames() {
     });
 }
 
-// NOWA FUNKCJA: Obsługa Modala Szczegółów Gry
+// Obsługa Modala Szczegółów Gry
 function openGameDetails(id) {
     const game = games.find(g => g.id === id);
     if (!game) return;
@@ -157,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btn-generate-scenario')?.addEventListener('click', generateScenario);
     document.getElementById('btn-generate-tilt')?.addEventListener('click', generateTilt);
     document.getElementById('btn-generate-mantra')?.addEventListener('click', generateMantra);
-    document.getElementById('btn-generate-location')?.addEventListener('click', generateLocation); // Nowy listener
+    document.getElementById('btn-generate-location')?.addEventListener('click', generateLocation);
     
     // Coach
     document.getElementById('btn-next-coach')?.addEventListener('click', nextCoachQuote);
@@ -178,7 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.code === 'Space' && !document.getElementById('content-coach').classList.contains('hidden')) {
             nextCoachQuote();
         }
-        // ESC zamyka modale
         if (e.key === "Escape") {
             closeMainInfo();
             closeMethodInfo();
