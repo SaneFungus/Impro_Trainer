@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impro Trainer wg Johnstone'a</title>
+    <title>Impro Trainer - Oskar Hamerski</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Ikony FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Własne style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col bg-neutral-900 text-neutral-200">
 
     <!-- Header -->
     <header class="bg-neutral-900 border-b border-neutral-800 p-4 shadow-lg sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
-            <h1 class="text-xl md:text-2xl font-bold text-amber-400">
+            <h1 class="text-xl md:text-2xl font-bold text-amber-500">
                 <i class="fas fa-theater-masks mr-2"></i>Impro Trainer
-                <span class="text-xs text-neutral-500 block md:inline md:ml-2 font-normal">wg metody Keitha Johnstone'a</span>
+                <span class="text-xs text-neutral-500 block md:inline md:ml-2 font-normal">na podstawie książki Oskara Hamerskiego</span>
             </h1>
             <button id="btn-info-main" class="text-neutral-400 hover:text-white transition">
                 <i class="fas fa-info-circle text-xl"></i>
@@ -27,19 +27,22 @@
     </header>
 
     <!-- Navigation -->
-    <nav class="bg-neutral-800 sticky top-[73px] z-40 shadow-md">
-        <div class="max-w-4xl mx-auto flex overflow-x-auto">
-            <button data-tab="behaviors" class="nav-btn flex-1 py-4 px-4 text-center hover:bg-neutral-700 transition active-tab whitespace-nowrap font-medium">
-                <i class="fas fa-list-ul mb-1 block"></i> Fast Food Stanisławski
+    <nav class="bg-neutral-800 sticky top-[73px] z-40 shadow-md border-b border-neutral-700">
+        <div class="max-w-4xl mx-auto flex overflow-x-auto no-scrollbar">
+            <button data-tab="behaviors" class="nav-btn flex-1 py-3 px-4 text-center hover:bg-neutral-700 transition active-tab whitespace-nowrap text-sm md:text-base font-medium border-b-2 border-transparent">
+                <i class="fas fa-list-ul mb-1 block md:inline md:mr-2"></i>Zachowania
             </button>
-            <button data-tab="scenarios" class="nav-btn flex-1 py-4 px-4 text-center hover:bg-neutral-700 transition whitespace-nowrap font-medium">
-                <i class="fas fa-bolt mb-1 block"></i> Inspiracje (Sceny/Miejsca)
+            <button data-tab="status-mixer" class="nav-btn flex-1 py-3 px-4 text-center hover:bg-neutral-700 transition whitespace-nowrap text-sm md:text-base font-medium border-b-2 border-transparent">
+                <i class="fas fa-random mb-1 block md:inline md:mr-2"></i>Status Mixer
             </button>
-            <button data-tab="coach" class="nav-btn flex-1 py-4 px-4 text-center hover:bg-neutral-700 transition whitespace-nowrap font-medium">
-                <i class="fas fa-user-graduate mb-1 block"></i> Wirtualny Trener
+            <button data-tab="life-game" class="nav-btn flex-1 py-3 px-4 text-center hover:bg-neutral-700 transition whitespace-nowrap text-sm md:text-base font-medium border-b-2 border-transparent">
+                <i class="fas fa-heart mb-1 block md:inline md:mr-2"></i>Life Game
             </button>
-            <button data-tab="games" class="nav-btn flex-1 py-4 px-4 text-center hover:bg-neutral-700 transition whitespace-nowrap font-medium">
-                <i class="fas fa-dice mb-1 block"></i> Baza Gier
+            <button data-tab="scenarios" class="nav-btn flex-1 py-3 px-4 text-center hover:bg-neutral-700 transition whitespace-nowrap text-sm md:text-base font-medium border-b-2 border-transparent">
+                <i class="fas fa-bolt mb-1 block md:inline md:mr-2"></i>Inspiracje
+            </button>
+            <button data-tab="games" class="nav-btn flex-1 py-3 px-4 text-center hover:bg-neutral-700 transition whitespace-nowrap text-sm md:text-base font-medium border-b-2 border-transparent">
+                <i class="fas fa-dice mb-1 block md:inline md:mr-2"></i>Gry
             </button>
         </div>
     </nav>
@@ -47,22 +50,19 @@
     <!-- Main Content -->
     <main class="flex-grow p-4 max-w-4xl mx-auto w-full">
 
-        <!-- TAB: Fast Food Stanislawski (Bez zmian w strukturze) -->
+        <!-- TAB: Fast Food Stanislawski -->
         <div id="content-behaviors" class="tab-content fade-in">
             <div class="bg-neutral-800 rounded-xl p-6 shadow-xl border border-neutral-700">
                 <div class="flex justify-between items-start mb-4">
                     <div>
                         <h2 class="text-2xl font-bold text-amber-100">Generator Zachowań</h2>
-                        <p class="text-neutral-400 text-sm mt-1">Kompletny zestaw list z "Impro for Storytellers".</p>
+                        <p class="text-neutral-400 text-sm mt-1">Szybka budowa postaci przez formę zewnętrzną.</p>
                     </div>
-                    <button id="btn-info-method" class="bg-neutral-700 hover:bg-amber-600 text-white text-xs px-3 py-1 rounded transition flex items-center gap-2">
-                        <i class="fas fa-book-open"></i> Jak używać?
-                    </button>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                     <div>
-                        <label class="block text-xs uppercase text-neutral-500 font-bold mb-2">Wybierz typ postaci / cel</label>
+                        <label class="block text-xs uppercase text-neutral-500 font-bold mb-2">Kategoria</label>
                         <select id="behavior-category" class="w-full bg-neutral-900 border border-neutral-700 text-white rounded-lg p-3 focus:outline-none focus:border-amber-500 transition">
                             <optgroup label="Podstawowe">
                                 <option value="high_status">Wysoki Status</option>
@@ -75,7 +75,7 @@
                                 <option value="seduce_w">Uwodzenie kobiety</option>
                                 <option value="bad_parent">Zły Rodzic</option>
                             </optgroup>
-                            <optgroup label="Archetypy i Maski">
+                            <optgroup label="Archetypy">
                                 <option value="hero">Bohater</option>
                                 <option value="beautiful">Piękność</option>
                                 <option value="mysterious">Tajemniczy</option>
@@ -84,35 +84,104 @@
                                 <option value="computer">Komputer</option>
                                 <option value="normal">Normalny</option>
                             </optgroup>
-                            <optgroup label="Negatywne / Trudne">
+                            <optgroup label="Negatywne">
                                 <option value="guilty">Winny</option>
                                 <option value="boring">Nudny</option>
                                 <option value="jerk">Palant</option>
                                 <option value="sympathy">Szukający Sympatii</option>
                             </optgroup>
-                            <optgroup label="Stan">
-                                <option value="happy">Zadowolony / Szczęśliwy</option>
-                            </optgroup>
                         </select>
                     </div>
                     <div class="flex items-end">
-                        <button id="btn-generate-behavior" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 px-4 rounded-lg transition shadow-lg transform active:scale-95">
+                        <button id="btn-generate-behavior" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 px-4 rounded-lg transition shadow-lg active:scale-95">
                             <i class="fas fa-random mr-2"></i> Losuj instrukcję
                         </button>
                     </div>
                 </div>
 
                 <div id="behavior-display" class="bg-neutral-900 rounded-lg p-8 text-center min-h-[200px] flex flex-col justify-center items-center border-2 border-dashed border-neutral-700 relative overflow-hidden">
-                    <i class="fas fa-theater-masks text-4xl text-neutral-600 mb-4"></i>
-                    <p class="text-neutral-500">Wybierz listę i wylosuj instrukcję, którą musisz natychmiast wykonać w scenie.</p>
+                    <i class="fas fa-mask text-4xl text-neutral-700 mb-4"></i>
+                    <p class="text-neutral-500">Wybierz listę i wylosuj instrukcję.</p>
                 </div>
             </div>
         </div>
 
-        <!-- TAB: Scenarios & Tilts (Zaktualizowany o Lokacje) -->
+        <!-- TAB: Status Mixer (NEW) -->
+        <div id="content-status-mixer" class="tab-content hidden fade-in">
+            <div class="bg-neutral-800 rounded-xl p-6 shadow-xl border border-neutral-700">
+                <h2 class="text-2xl font-bold text-amber-100 mb-2"><i class="fas fa-blender mr-2 text-amber-500"></i>Status Mixer</h2>
+                <p class="text-neutral-400 text-sm mb-6">Zgodnie z Dniem 10 warsztatów: połącz dwie sprzeczne listy, aby stworzyć postać wielowymiarową.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs text-neutral-500 mb-1">Lista 1</label>
+                        <select id="mixer-cat-1" class="w-full bg-neutral-900 border border-neutral-600 rounded p-2 text-sm text-neutral-300">
+                            <option value="high_status">Wysoki Status</option>
+                            <option value="low_status">Niski Status</option>
+                            <option value="hero">Bohater</option>
+                            <option value="seduce_w">Uwodziciel</option>
+                            <option value="smart">Inteligent</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-neutral-500 mb-1">Lista 2</label>
+                        <select id="mixer-cat-2" class="w-full bg-neutral-900 border border-neutral-600 rounded p-2 text-sm text-neutral-300">
+                            <option value="guilty">Winny</option>
+                            <option value="boring">Nudny</option>
+                            <option value="jerk">Palant</option>
+                            <option value="bad_parent">Zły Rodzic</option>
+                            <option value="sympathy">Ofiara</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button id="btn-mix-behaviors" class="w-full bg-gradient-to-r from-amber-700 to-amber-600 hover:from-amber-600 hover:to-amber-500 text-white font-bold py-3 px-4 rounded-lg transition mb-6 shadow-lg">
+                    <i class="fas fa-dna mr-2"></i> Stwórz Hybrydę
+                </button>
+
+                <div id="mixer-display" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Results will appear here -->
+                    <div class="bg-neutral-900 p-4 rounded border border-neutral-700 flex items-center justify-center text-neutral-500 h-32">Cechy Listy 1</div>
+                    <div class="bg-neutral-900 p-4 rounded border border-neutral-700 flex items-center justify-center text-neutral-500 h-32">Cechy Listy 2</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Life Game (NEW) -->
+        <div id="content-life-game" class="tab-content hidden fade-in">
+            <div class="bg-neutral-800 rounded-xl p-6 shadow-xl border border-neutral-700">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-2xl font-bold text-amber-100"><i class="fas fa-heart mr-2 text-rose-500"></i>The Life Game™</h2>
+                    <span class="text-xs bg-rose-900 text-rose-200 px-2 py-1 rounded">Wywiad</span>
+                </div>
+                <p class="text-neutral-400 text-sm mb-6">Pytania do wywiadu z gościem (str. 91). Użyj dzwonka (Prawda) i trąbki (Fałsz/Korekta) podczas scen.</p>
+
+                <div id="life-question-display" class="bg-neutral-900 p-8 rounded-lg text-center min-h-[150px] flex flex-col justify-center items-center border border-neutral-600 mb-6 relative">
+                    <i class="fas fa-microphone-alt text-4xl text-neutral-700 absolute top-4 left-4 opacity-20"></i>
+                    <p class="text-xl md:text-2xl text-rose-100 font-serif italic" id="life-question-text">"Kliknij przycisk poniżej, aby zadać pytanie..."</p>
+                </div>
+
+                <button id="btn-life-question" class="w-full bg-rose-700 hover:bg-rose-600 text-white font-bold py-3 px-4 rounded-lg transition mb-6 shadow-lg">
+                    <i class="fas fa-question-circle mr-2"></i> Zadaj pytanie osobiste
+                </button>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <button id="btn-bell" class="bg-neutral-700 hover:bg-green-700 hover:text-white text-green-400 font-bold py-4 rounded-lg transition border border-neutral-600 flex flex-col items-center">
+                        <i class="fas fa-bell text-2xl mb-1"></i>
+                        <span>Dzwonek (Prawda)</span>
+                    </button>
+                    <button id="btn-horn" class="bg-neutral-700 hover:bg-red-700 hover:text-white text-red-400 font-bold py-4 rounded-lg transition border border-neutral-600 flex flex-col items-center">
+                        <i class="fas fa-bullhorn text-2xl mb-1"></i>
+                        <span>Trąbka (Fałsz)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Scenarios & Tilts -->
         <div id="content-scenarios" class="tab-content hidden fade-in">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Locations Generator (NEW) -->
+                <!-- Locations -->
                 <div class="bg-neutral-800 rounded-xl p-6 shadow-xl border border-neutral-700 md:col-span-2">
                      <h2 class="text-xl font-bold mb-4 text-amber-100"><i class="fas fa-map-marker-alt mr-2 text-green-500"></i>Lokalizacja</h2>
                      <div class="flex flex-col md:flex-row gap-4 items-center">
@@ -120,15 +189,14 @@
                             Losuj Miejsce
                         </button>
                         <div id="location-display" class="w-full bg-neutral-900 p-3 rounded-lg text-green-100 flex items-center justify-center text-center font-medium border border-green-900/30 min-h-[50px]">
-                            Kliknij, aby ustalić miejsce akcji...
+                            ...
                         </div>
                      </div>
                 </div>
 
                 <!-- Scenario Starter -->
                 <div class="bg-neutral-800 rounded-xl p-6 shadow-xl border border-neutral-700">
-                    <h2 class="text-xl font-bold mb-4 text-amber-100"><i class="fas fa-play mr-2 text-amber-500"></i>Start Sceny (Relacja)</h2>
-                    <p class="text-neutral-400 text-sm mb-4">Inspiracje do rozpoczęcia sceny oparte na "kręgu oczekiwań" i prostych relacjach.</p>
+                    <h2 class="text-xl font-bold mb-4 text-amber-100"><i class="fas fa-play mr-2 text-amber-500"></i>Start Sceny</h2>
                     <button id="btn-generate-scenario" class="w-full bg-neutral-700 hover:bg-neutral-600 text-white font-bold py-3 px-4 rounded-lg transition mb-4">
                         Nowa Inspiracja
                     </button>
@@ -140,7 +208,6 @@
                 <!-- Tilt Generator -->
                 <div class="bg-neutral-800 rounded-xl p-6 shadow-xl border border-neutral-700">
                     <h2 class="text-xl font-bold mb-4 text-amber-100"><i class="fas fa-bolt mr-2 text-red-500"></i>Generator Tiltów</h2>
-                    <p class="text-neutral-400 text-sm mb-4">"Tilt" to nagła zmiana kontekstu lub relacji, która popycha akcję do przodu.</p>
                     <button id="btn-generate-tilt" class="w-full bg-red-900 hover:bg-red-800 text-white font-bold py-3 px-4 rounded-lg transition mb-4">
                         Wprowadź Tilt!
                     </button>
@@ -149,37 +216,16 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Mantras -->
-            <div class="mt-6 bg-neutral-800 rounded-xl p-6 shadow-xl border border-neutral-700">
-                <h2 class="text-xl font-bold mb-4 text-amber-100"><i class="fas fa-om mr-2 text-purple-400"></i>Mantry Wewnętrzne</h2>
-                <div class="flex gap-4">
-                    <button id="btn-generate-mantra" class="bg-purple-900 hover:bg-purple-800 text-white font-bold py-2 px-6 rounded-lg transition whitespace-nowrap">
-                        Losuj Mantrę
-                    </button>
-                    <div id="mantra-display" class="flex-grow bg-neutral-900 p-3 rounded-lg flex items-center text-purple-200 justify-center text-center">
-                        Kliknij...
-                    </div>
+            
+            <!-- Coach Section (Moved here as a subsection) -->
+            <div class="mt-6 bg-neutral-800 rounded-xl p-6 shadow-xl border border-neutral-700 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 to-yellow-500"></div>
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-white"><i class="fas fa-user-graduate mr-2 text-amber-400"></i>Trener Johnstone</h2>
+                    <button id="btn-next-coach" class="bg-neutral-700 hover:bg-neutral-600 text-xs px-3 py-1 rounded text-white">Następna uwaga</button>
                 </div>
-            </div>
-        </div>
-
-        <!-- TAB: Coach -->
-        <div id="content-coach" class="tab-content hidden fade-in">
-            <div class="bg-neutral-800 rounded-xl p-8 shadow-xl border border-neutral-700 text-center relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600"></div>
-                <h2 class="text-3xl font-bold mb-2 text-white">Trener Johnstone</h2>
-                <p class="text-neutral-400 mb-8">Użyj tego trybu podczas improwizacji. Klikaj spację lub ustaw auto-zmianę.</p>
-                <div id="coach-display" class="text-2xl md:text-4xl font-bold text-amber-400 min-h-[150px] flex items-center justify-center transition-all duration-300 transform scale-100 p-4 border-y border-neutral-700 bg-neutral-900/50">
+                <div id="coach-display" class="text-lg md:text-xl font-bold text-amber-400 text-center p-4 bg-neutral-900/50 rounded">
                     "Bądź oczywisty!"
-                </div>
-                <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
-                    <button id="btn-next-coach" class="bg-neutral-700 hover:bg-neutral-600 text-white font-bold py-3 px-8 rounded-full text-lg transition">
-                        <i class="fas fa-step-forward mr-2"></i> Następna uwaga
-                    </button>
-                    <button id="auto-coach-btn" class="bg-transparent border-2 border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-white font-bold py-3 px-8 rounded-full text-lg transition">
-                        <i class="fas fa-play mr-2"></i> Auto (co 10s)
-                    </button>
                 </div>
             </div>
         </div>
@@ -188,7 +234,7 @@
         <div id="content-games" class="tab-content hidden fade-in">
              <div class="bg-neutral-800 p-4 rounded-lg mb-6 border border-neutral-700 flex items-center">
                 <i class="fas fa-mouse-pointer text-amber-500 mr-3 text-xl"></i>
-                <p class="text-neutral-400 text-sm">Kliknij na kafelek gry, aby zobaczyć szczegółowy opis i cel dydaktyczny.</p>
+                <p class="text-neutral-400 text-sm">Kliknij na grę, aby zobaczyć opis i cel dydaktyczny.</p>
             </div>
             <div class="grid gap-4" id="games-list">
                 <!-- Games injected by JS -->
@@ -198,67 +244,43 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-neutral-900 text-neutral-500 py-6 mt-auto border-t border-neutral-800 text-sm text-center">
-        <p>Opracowano na podstawie książki "Improwizacja wg Johnstone'a" (Oskar Hamerski) oraz "Impro for Storytellers".</p>
+    <footer class="bg-neutral-900 text-neutral-600 py-6 mt-auto border-t border-neutral-800 text-xs text-center">
+        <p>Opracowano na podstawie książki "Improwizacja wg Johnstone'a" (Oskar Hamerski). Narzędzie edukacyjne.</p>
     </footer>
 
-    <!-- Modals (Info & Method - same as before) -->
-    <div id="main-info-modal" class="fixed inset-0 bg-black/80 z-[60] hidden flex items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-neutral-800 p-6 rounded-xl max-w-md w-full border border-neutral-700 shadow-2xl">
-            <h3 class="text-xl font-bold text-white mb-2">O narzędziu</h3>
-            <p class="text-neutral-300 mb-4">Cyfrowy asystent trenera improwizacji.</p>
-            <button id="btn-close-main-info" class="w-full bg-amber-600 text-white py-2 rounded hover:bg-amber-500">Zamknij</button>
-        </div>
-    </div>
-
-    <div id="method-info-modal" class="fixed inset-0 bg-black/80 z-[60] hidden flex items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-neutral-800 p-0 rounded-xl max-w-lg w-full border border-neutral-700 shadow-2xl overflow-hidden max-h-[80vh] flex flex-col">
-            <div class="p-6 border-b border-neutral-700 bg-neutral-900">
-                <h3 class="text-xl font-bold text-amber-400"><i class="fas fa-book-open mr-2"></i>Fast Food Stanisławski</h3>
-            </div>
-            <div class="p-6 overflow-y-auto text-neutral-300 space-y-4">
-                <p class="text-sm">Metoda "na skróty" pozwalająca na natychmiastowe budowanie postaci poprzez zewnętrzne zachowania.</p>
-            </div>
-            <div class="p-4 bg-neutral-900 border-t border-neutral-700">
-                <button id="btn-close-method-info" class="w-full bg-neutral-700 text-white py-2 rounded hover:bg-neutral-600 transition">Zrozumiałem</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- NEW: GAME DETAILS MODAL -->
+    <!-- Modals (Hidden) -->
     <div id="game-details-modal" class="fixed inset-0 bg-black/90 z-[70] hidden flex items-center justify-center p-4 backdrop-blur-md">
         <div class="bg-neutral-800 rounded-xl max-w-lg w-full border border-neutral-600 shadow-2xl overflow-hidden transform transition-all scale-100">
             <div class="p-6 relative">
-                <button id="btn-close-game-modal" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-xl">
-                    <i class="fas fa-times"></i>
-                </button>
-                
-                <span id="modal-game-category" class="inline-block bg-amber-900 text-amber-200 text-xs px-2 py-1 rounded uppercase tracking-wider font-bold mb-3">
-                    Category
-                </span>
-                
+                <button id="btn-close-game-modal" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-xl"><i class="fas fa-times"></i></button>
+                <span id="modal-game-category" class="inline-block bg-amber-900 text-amber-200 text-xs px-2 py-1 rounded uppercase tracking-wider font-bold mb-3">Category</span>
                 <h3 id="modal-game-title" class="text-2xl font-bold text-white mb-4">Game Title</h3>
-                
                 <div class="space-y-4">
                     <div>
-                        <h4 class="text-sm uppercase text-neutral-500 font-bold mb-1">Opis gry:</h4>
-                        <p id="modal-game-desc" class="text-neutral-300 leading-relaxed">...</p>
+                        <h4 class="text-sm uppercase text-neutral-500 font-bold mb-1">Opis:</h4>
+                        <p id="modal-game-desc" class="text-neutral-300 leading-relaxed text-sm">...</p>
                     </div>
-                    
                     <div class="bg-neutral-900 p-4 rounded-lg border-l-4 border-green-600">
-                        <h4 class="text-sm uppercase text-green-500 font-bold mb-1"><i class="fas fa-bullseye mr-2"></i>Cel dydaktyczny:</h4>
-                        <p id="modal-game-goal" class="text-neutral-200 italic">...</p>
+                        <h4 class="text-sm uppercase text-green-500 font-bold mb-1"><i class="fas fa-bullseye mr-2"></i>Cel:</h4>
+                        <p id="modal-game-goal" class="text-neutral-200 italic text-sm">...</p>
                     </div>
                 </div>
             </div>
             <div class="p-4 bg-neutral-900 border-t border-neutral-700">
-                 <button id="btn-close-game-modal-action" class="w-full bg-neutral-700 hover:bg-neutral-600 text-white font-bold py-3 rounded-lg transition">
-                    Wróć do listy
-                </button>
+                 <button id="btn-close-game-modal-action" class="w-full bg-neutral-700 hover:bg-neutral-600 text-white font-bold py-3 rounded-lg transition">Zamknij</button>
             </div>
         </div>
     </div>
+    
+    <!-- Info Modal -->
+    <div id="main-info-modal" class="fixed inset-0 bg-black/80 z-[60] hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-neutral-800 p-6 rounded-xl max-w-md w-full border border-neutral-700 shadow-2xl">
+            <h3 class="text-xl font-bold text-white mb-2">O aplikacji</h3>
+            <p class="text-neutral-300 mb-4 text-sm">Cyfrowy asystent do treningu improwizacji.</p>
+            <button id="btn-close-main-info" class="w-full bg-amber-600 text-white py-2 rounded hover:bg-amber-500">Ok</button>
+        </div>
+    </div>
 
-    <script type="module" src="js/app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
