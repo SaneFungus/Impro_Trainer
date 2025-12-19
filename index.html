@@ -317,12 +317,43 @@
         </div>
     </div>
     
-    <!-- Info Modal -->
+    <!-- Main Info Modal -->
     <div id="main-info-modal" class="fixed inset-0 bg-black/80 z-[60] hidden flex items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-neutral-800 p-6 rounded-xl max-w-md w-full border border-neutral-700 shadow-2xl">
-            <h3 class="text-xl font-bold text-white mb-2">O aplikacji</h3>
-            <p class="text-neutral-300 mb-4 text-sm">Cyfrowy asystent do treningu improwizacji.</p>
-            <button id="btn-close-main-info" class="w-full bg-amber-600 text-white py-2 rounded hover:bg-amber-500">Ok</button>
+        <div class="bg-neutral-800 p-6 rounded-xl max-w-lg w-full border border-neutral-700 shadow-2xl max-h-[90vh] overflow-y-auto">
+            <h3 class="text-2xl font-bold text-amber-400 mb-4 flex items-center gap-2">
+                <i class="fas fa-theater-masks"></i> O Impro Trainerze
+            </h3>
+
+            <div class="space-y-4 text-neutral-300 text-sm leading-relaxed">
+                <p>
+                    <strong>Impro Trainer</strong> to cyfrowy asystent dla studentów aktorstwa i improwizatorów, oparty na metodologii <strong>Keitha Johnstone'a</strong> – jednego z najważniejszych reformatorów współczesnego teatru i twórcy formatów takich jak <em>Theatresports™</em> czy <em>Micetro</em>.
+                </p>
+
+                <div class="bg-neutral-900 p-4 rounded-lg border-l-4 border-amber-600">
+                    <h4 class="text-white font-bold mb-2">Dlaczego to narzędzie istnieje?</h4>
+                    <p>
+                        Johnstone zauważył, że aktorzy często blokują się ze strachu przed byciem "nieoryginalnym" lub "niepoprawnym". To narzędzie ma za zadanie zdjąć z Ciebie ciężar wymyślania ("Co mam teraz zrobić?"), podsuwając losowe, ale precyzyjne instrukcje. Dzięki temu możesz skupić się na <strong>działaniu</strong>, a nie na planowaniu.
+                    </p>
+                </div>
+
+                <h4 class="text-white font-bold mt-4 border-b border-neutral-700 pb-1">Co tu znajdziesz?</h4>
+                <ul class="list-disc list-inside space-y-1 ml-2">
+                    <li><strong>Fast Food Stanisławski:</strong> Kompletny zestaw list zachowań ("masek"), które pozwalają natychmiast wejść w rolę, bez długiej analizy psychologicznej.</li>
+                    <li><strong>Generator Tiltów:</strong> Narzędzie do wprowadzania nagłych zwrotów akcji, które "wybijają" scenę z bezpiecznej nudy.</li>
+                    <li><strong>Trener Wirtualny:</strong> Zbiór aforyzmów i uwag reżyserskich Johnstone'a (np. "Bądź oczywisty", "Bądź nudny"), które paradoksalnie uwalniają kreatywność.</li>
+                </ul>
+
+                <p class="text-xs text-neutral-500 mt-6 pt-4 border-t border-neutral-700">
+                    Opracowano na podstawie książek: <em>"Impro: Improvisation and the Theatre"</em> oraz <em>"Impro for Storytellers"</em> Keitha Johnstone'a, a także materiałów warsztatowych Oskara Hamerskiego. <br>
+                    Narzędzie edukacyjne typu open-source.
+                </p>
+            </div>
+
+            <div class="mt-6">
+                <button id="btn-close-main-info" class="w-full bg-neutral-700 hover:bg-neutral-600 text-white font-bold py-3 rounded-lg transition shadow-lg">
+                    Zamknij
+                </button>
+            </div>
         </div>
     </div>
 
